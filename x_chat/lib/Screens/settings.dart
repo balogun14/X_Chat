@@ -31,21 +31,25 @@ class _SettingsPageState extends State<SettingsPage> {
         ),
             ),
             Padding(padding: EdgeInsets.only(top: 50,left: 30,right: 26),),
-            Row(
+            Column(
               children: [
-                CircleAvatar(
-                  child:Icon(Icons.camera_alt_outlined),
-                  backgroundImage: AssetImage("images/awwal.JPG"),
-                  backgroundColor: Colors.black.withOpacity(1),
-                  maxRadius: 40,
+                Row(
+                  children: [
+                    CircleAvatar(
+                      child:Icon(Icons.camera_alt_outlined),
+                      backgroundImage: AssetImage("images/awwal.JPG"),
+                      backgroundColor: Colors.black.withOpacity(1),
+                      maxRadius: 40,
+                    ),
+                    SizedBox(width: 25,),
+                    Expanded(child: TextFormField(
+                      decoration:  const InputDecoration(
+                          hintText: "do you want to change your name",
+                          labelText: 'Name'
+                      ),
+                    )),
+                  ],
                 ),
-                SizedBox(width: 25,),
-                Expanded(child: TextFormField(
-                  decoration:  const InputDecoration(
-                    hintText: "do you want to change your name",
-                    labelText: 'Name'
-                  ),
-                ))
               ],
             )
           ],

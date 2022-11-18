@@ -146,6 +146,7 @@ class _ChatPageState extends State<ChatPage> {
               ),
             ),
             ListView.builder(
+              scrollDirection: Axis.vertical,
               itemCount: chatUsers.length,
               shrinkWrap: true,
               padding: EdgeInsets.only(top: 16),
