@@ -28,7 +28,7 @@ class _ConversationListState extends State<ConversationList> {
       }));
       },
       child: Container(
-        padding: EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
+        padding: const EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
         child: Row(
           children: <Widget>[
             Expanded(
@@ -38,7 +38,7 @@ class _ConversationListState extends State<ConversationList> {
                     backgroundImage: AssetImage(widget.imageUrl),
                     maxRadius: 30,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 16,
                   ),
                   Expanded(
@@ -49,9 +49,9 @@ class _ConversationListState extends State<ConversationList> {
                         children: <Widget>[
                           Text(
                             widget.name,
-                            style: TextStyle(fontSize: 16),
+                            style: const TextStyle(fontSize: 16),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 6,
                           ),
                           Text(

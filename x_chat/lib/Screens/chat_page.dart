@@ -83,17 +83,17 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SafeArea(
                 child: Padding(
-              padding: EdgeInsets.only(left: 16, right: 16, top: 12),
+              padding: const EdgeInsets.only(left: 16, right: 16, top: 12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Conversations',
                     style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
                   ),
@@ -126,7 +126,7 @@ class _ChatPageState extends State<ChatPage> {
               ),
             )),
             Padding(
-              padding: EdgeInsets.only(top: 16, left: 16, right: 16),
+              padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
               child: TextField(
                 decoration: InputDecoration(
                   hintText: "Search...",
@@ -138,7 +138,7 @@ class _ChatPageState extends State<ChatPage> {
                   ),
                   filled: true,
                   fillColor: Colors.grey.shade100,
-                  contentPadding: EdgeInsets.all(8),
+                  contentPadding: const EdgeInsets.all(8),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide(color: Colors.grey.shade100)),
@@ -149,8 +149,8 @@ class _ChatPageState extends State<ChatPage> {
               scrollDirection: Axis.vertical,
               itemCount: chatUsers.length,
               shrinkWrap: true,
-              padding: EdgeInsets.only(top: 16),
-              physics: NeverScrollableScrollPhysics(),
+              padding: const EdgeInsets.only(top: 16),
+              physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index){
                 return ConversationList(
                   name: chatUsers[index].name,

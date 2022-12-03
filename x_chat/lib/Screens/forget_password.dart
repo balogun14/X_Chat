@@ -4,7 +4,7 @@ class Forget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Password(),
     );
   }
@@ -17,7 +17,7 @@ class Password extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.redAccent,
       body: SafeArea(child: Container(
-        child: Center(child: Text('Why did you forget your Password',style: TextStyle(fontSize: 40,fontStyle: FontStyle.italic),)),
+        child: const Center(child: Text('Why did you forget your Password',style: TextStyle(fontSize: 40,fontStyle: FontStyle.italic),)),
       ),
 
       )

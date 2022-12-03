@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:x_chat/Screens/forget_password.dart';
 import 'package:x_chat/Screens/sign_up.dart';
 
+import 'chat_page.dart';
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -22,8 +24,8 @@ class _LoginState extends State<Login> {
             children: <Widget>[
               Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.all(10),
-                child: Text(
+                padding: const EdgeInsets.all(10),
+                child: const Text(
                   'Login',
                   style: TextStyle(
                       color: Colors.black12,
@@ -33,20 +35,20 @@ class _LoginState extends State<Login> {
               ),
               Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: TextField(
                   textAlign: TextAlign.center,
                   controller: nameController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF30D5C8)),
+                        borderSide: const BorderSide(color: Color(0xFF30D5C8)),
                         borderRadius: BorderRadius.circular(50)),
                     labelText: 'Email',
                   ),
                 ),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                 child: TextField(
                   textAlign: TextAlign.center,
                   obscureText: true,
@@ -64,30 +66,35 @@ class _LoginState extends State<Login> {
                         MaterialPageRoute(
                             builder: (context) => const Forget()));
                   },
-                  child: Text(
+                  child: const Text(
                     'Forgot Password',
                   )),
               Container(
                 height: 50,
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                        onPressed: () {
-                          print(nameController.text);
-                          print(passwordController.text);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFFDA70D6),
-                        ),
-                        child: Text('Login')),
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context) => const ChatPage()
+                            ));
+                            print(nameController.text);
+                            print(passwordController.text);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFFDA70D6),
+                          ),
+                          child: const Text('Login')),
+                    ),
                   ],
                 ),
               ),
               Row(
                 children: <Widget>[
-                  Text('Does not have account'),
+                  const Text('Does not have account'),
                   TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -95,7 +102,7 @@ class _LoginState extends State<Login> {
                           MaterialPageRoute(
                               builder: (context) => const SingUp()));
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign up',
                       style: TextStyle(fontSize: 20),
                     ),

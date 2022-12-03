@@ -17,7 +17,7 @@ class WelcomeScreen extends StatelessWidget {
             Container(
               child: Image.asset('images/x_chat.png'),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
               width: 150,
             ),
@@ -29,7 +29,7 @@ class WelcomeScreen extends StatelessWidget {
                     ));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFDA70D6),
+                backgroundColor: const Color(0xFFDA70D6),
               ),
               child: const Text(
                 "Sign up",
@@ -48,8 +48,8 @@ class WelcomeScreen extends StatelessWidget {
 
                 },
                 style:
-                    ElevatedButton.styleFrom(backgroundColor: Color(0xFF30D5C8)),
-                child: Text(
+                    ElevatedButton.styleFrom(backgroundColor: const Color(0xFF30D5C8)),
+                child: const Text(
                   "Log in",
                   style: TextStyle(fontWeight: FontWeight.w200),
                 )),

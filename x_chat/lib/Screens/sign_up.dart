@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'chat_page.dart';
+
 class SingUp extends StatefulWidget {
   const SingUp({Key? key}) : super(key: key);
 
@@ -22,8 +24,8 @@ class _SingUpState extends State<SingUp> {
             children: <Widget>[
               Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.all(10),
-                child: Text(
+                padding: const EdgeInsets.all(10),
+                child: const Text(
                   'Sign Up',
                   style: TextStyle(
                       color: Colors.black,
@@ -33,7 +35,7 @@ class _SingUpState extends State<SingUp> {
               ),
               Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: TextField(
                   textAlign: TextAlign.center,
                   controller: nameController,
@@ -46,7 +48,7 @@ class _SingUpState extends State<SingUp> {
               ),
               Container(
                 alignment: Alignment.center,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: TextField(
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
@@ -69,24 +71,25 @@ class _SingUpState extends State<SingUp> {
               //         labelText: 'password'),
               //   ),
               // ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
                 height: 50,
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
                         onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder:(context) => const ChatPage()
+                          ));
                           print(nameController.text);
-                          print(passwordController.text);
-                        },
+                          print(passwordController.text); },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF30D5C8),
+                          backgroundColor: const Color(0xFF30D5C8),
                         ),
-                        child: Text('Sign Up')),
+                        child: const Text('Sign Up')),
                   ],
                 ),              ),
               // Row(

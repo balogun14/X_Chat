@@ -12,17 +12,17 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SafeArea(
               child: Padding(
-            padding: EdgeInsets.only(left: 16,right: 16,top: 12),
+            padding: const EdgeInsets.only(left: 16,right: 16,top: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-           Text(
+           const Text(
             "Settings",
             style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
           )
@@ -30,18 +30,18 @@ class _SettingsPageState extends State<SettingsPage> {
         ),
         ),
             ),
-            Padding(padding: EdgeInsets.only(top: 50,left: 30,right: 26),),
+            const Padding(padding: EdgeInsets.only(top: 50,left: 30,right: 26),),
             Column(
               children: [
                 Row(
                   children: [
                     CircleAvatar(
-                      child:Icon(Icons.camera_alt_outlined),
-                      backgroundImage: AssetImage("images/awwal.JPG"),
+                      child:const Icon(Icons.camera_alt_outlined),
+                      backgroundImage: const AssetImage("images/awwal.JPG"),
                       backgroundColor: Colors.black.withOpacity(1),
                       maxRadius: 40,
                     ),
-                    SizedBox(width: 25,),
+                    const SizedBox(width: 25,),
                     Expanded(child: TextFormField(
                       decoration:  const InputDecoration(
                           hintText: "do you want to change your name",
